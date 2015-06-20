@@ -116,7 +116,7 @@ int main (void)
             goto end;
         }
         step_body(&snake_body, previousx, previousy);
-        if((head->x < 0 || head->x > (WIDTH - 20)) || (head->y < 0 || head->y > HEIGHT)) {
+        if((head->x < 0 || head->x > (WIDTH - 20)) || (head->y < 0 || head->y > (HEIGHT - 20))) {
             goto end;
         }
         if (SDL_HasIntersection(head, fruit) == SDL_TRUE) {
