@@ -31,7 +31,7 @@ void draw_fruit(SDL_Renderer *r, SDL_Rect *f);
 void draw_body(SDL_Renderer *r, struct body *b);
 void clean_body(struct body *b);
 
-int main (void)
+int main (int argc, char *argv[])
 {
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         printf("SDL Init Error: %s\n", SDL_GetError());
