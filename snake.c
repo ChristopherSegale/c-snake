@@ -122,6 +122,7 @@ int main (int argc, char *argv[])
         if (SDL_HasIntersection(head, fruit) == SDL_TRUE) {
             add_body(&snake_body, previousx, previousy);
             do {
+                free(fruit);
                 fruit = make_fruit();
             } while (intersect_body(snake_body, fruit));
         }
@@ -134,6 +135,7 @@ int main (int argc, char *argv[])
     }
 end:
     free(head);
+    free(fruit);
     clean_body(snake_body);
     SDL_DestroyRenderer(ren);
     SDL_DestroyWindow(win);
